@@ -62,9 +62,6 @@ form.addEventListener("submit", (event) => {
 
   // Adicionar tarefa no HTML
 
-  // Criar tag li
-  // const li = document.createElement("li");
-
   const cE = createElement;
 
   const card = cE("li", { class: "kanban-card", draggable: true }, [
