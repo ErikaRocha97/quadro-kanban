@@ -17,231 +17,228 @@
     <title>Kanban</title>
   </head>
   <body>
-    <main class="kanban">
-      <!-- COLUMN 1 -->
-      <div class="kanban-column" data-id="1">
-        <div class="kanban-title">
-          <h2>Pendente</h2>
+    <main>
+      <!-- ! Adicionar tarefa  -->
 
-          <button class="add-card">
-            <i class="fa-solid fa-plus"></i>
-          </button>
-        </div>
-        <!-- CARDS -->
-        <div class="kanban-cards">
-          <div class="kanban-card" draggable="true" draggable="true">
-            <div class="badge high">
-              <span> Alta prioridade </span>
-            </div>
+      <form id="task-form">
+        <input
+          type="text"
+          id="task-title-input"
+          placeholder="Adicionar tarefa..."
+        />
+        <!-- o botão tem por padrão o type "submit" -->
+        <button id="add-task-button">Adicionar</button>
+      </form>
 
-            <p class="card-title">Título da tarefa</p>
+      <!-- ! Kanban -->
 
-            <div class="card-infos">
-              <div class="card-icons">
-                <p>
-                  <i class="fa-regular fa-comment"></i>
-                  1
-                </p>
+      <section class="kanban">
+        <!-- ! COLUNA 1: Lista de tarefas pendentes -->
 
-                <p>
-                  <i class="fa-solid fa-paperclip"></i>
-                  1
-                </p>
-              </div>
-              <!--  -->
-              <div class="user">
-                <img
-                  src="src/images/androgynous-avatar-non-binary-queer-person (1).jpg"
-                  alt="Avatar"
-                />
-              </div>
-              <!--  -->
-            </div>
-            <!--  -->
+        <div class="kanban-column" data-id="1">
+          <div class="kanban-title">
+            <h2>Pendente</h2>
+
+            <button class="add-card">
+              <i class="fa-solid fa-plus"></i>
+            </button>
           </div>
-          <!--  -->
-        </div>
-      </div>
-
-      <!-- COLUMN 2 -->
-      <div class="kanban-column" data-id="2">
-        <div class="kanban-title">
-          <h2>Etapa 1</h2>
-
-          <button class="add-card">
-            <i class="fa-solid fa-plus"></i>
-          </button>
-        </div>
-        <!-- CARDS -->
-        <div class="kanban-cards">
-          <div class="kanban-card" draggable="true">
-            <div class="badge medium">
-              <span>Média prioridade </span>
-            </div>
-
-            <p class="card-title">Título da tarefa</p>
-
-            <div class="card-infos">
-              <div class="card-icons">
-                <p>
-                  <i class="fa-regular fa-comment"></i>
-                  1
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-paperclip"></i>
-                  1
-                </p>
+          <!-- CARDS -->
+          <ul class="kanban-cards" id="kanban-pending">
+            <li class="kanban-card" draggable="true">
+              <div class="badge high">
+                <span> Alta prioridade </span>
               </div>
-              <!--  -->
-              <div class="user">
-                <img
-                  src="src/images/androgynous-avatar-non-binary-queer-person (1).jpg"
-                  alt="Avatar"
-                />
+
+              <p class="card-title">Título da tarefa</p>
+
+              <div class="card-infos">
+                <!-- <div class="card-icons">
+                  <p>
+                    <i class="fa-regular fa-comment"></i>
+                    1
+                  </p>
+
+                  <p>
+                    <i class="fa-solid fa-paperclip"></i>
+                    1
+                  </p>
+                </div> -->
+                <div class="user">
+                  <img
+                    src="src/images/androgynous-avatar-non-binary-queer-person (1).jpg"
+                    alt="Avatar"
+                  />
+                </div>
               </div>
-              <!--  -->
-            </div>
-            <!--  -->
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 2 -->
+        <ul class="kanban-column" data-id="2">
+          <div class="kanban-title">
+            <h2>Etapa 1</h2>
+
+            <button class="add-card">
+              <i class="fa-solid fa-plus"></i>
+            </button>
           </div>
-          <!--  -->
-        </div>
-      </div>
-
-      <!-- COLUMN 3 -->
-      <div class="kanban-column" data-id="3">
-        <div class="kanban-title">
-          <h2>Etapa 2</h2>
-
-          <button class="add-card">
-            <i class="fa-solid fa-plus"></i>
-          </button>
-        </div>
-        <!-- CARDS -->
-        <div class="kanban-cards">
-          <div class="kanban-card" draggable="true">
-            <div class="badge low">
-              <span> Baixa prioridade </span>
-            </div>
-
-            <p class="card-title">Título da tarefa</p>
-
-            <div class="card-infos">
-              <div class="card-icons">
-                <p>
-                  <i class="fa-regular fa-comment"></i>
-                  1
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-paperclip"></i>
-                  1
-                </p>
+          <!-- CARDS -->
+          <li class="kanban-cards">
+            <div class="kanban-card" draggable="true">
+              <div class="badge medium">
+                <span>Média prioridade </span>
               </div>
-              <!--  -->
-              <div class="user">
-                <img
-                  src="src/images/androgynous-avatar-non-binary-queer-person (1).jpg"
-                  alt="Avatar"
-                />
+
+              <p class="card-title">Título da tarefa</p>
+
+              <div class="card-infos">
+                <!-- <div class="card-icons">
+                  <p>
+                    <i class="fa-regular fa-comment"></i>
+                    1
+                  </p>
+
+                  <p>
+                    <i class="fa-solid fa-paperclip"></i>
+                    1
+                  </p>
+                </div> -->
+                <div class="user">
+                  <img
+                    src="src/images/androgynous-avatar-non-binary-queer-person (1).jpg"
+                    alt="Avatar"
+                  />
+                </div>
               </div>
-              <!--  -->
             </div>
-            <!--  -->
+          </li>
+        </ul>
+
+        <!-- COLUMN 3 -->
+        <ul class="kanban-column" data-id="3">
+          <div class="kanban-title">
+            <h2>Etapa 2</h2>
+
+            <button class="add-card">
+              <i class="fa-solid fa-plus"></i>
+            </button>
           </div>
-          <!--  -->
-        </div>
-      </div>
-
-      <!-- COLUMN 4 -->
-      <div class="kanban-column" data-id="4">
-        <div class="kanban-title">
-          <h2>Em teste</h2>
-
-          <button class="add-card">
-            <i class="fa-solid fa-plus"></i>
-          </button>
-        </div>
-        <!-- CARDS -->
-        <div class="kanban-cards">
-          <div class="kanban-card" draggable="true">
-            <div class="badge high">
-              <span> Alta prioridade </span>
-            </div>
-
-            <p class="card-title">Título da tarefa</p>
-
-            <div class="card-infos">
-              <div class="card-icons">
-                <p>
-                  <i class="fa-regular fa-comment"></i>
-                  1
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-paperclip"></i>
-                  1
-                </p>
+          <!-- CARDS -->
+          <li class="kanban-cards">
+            <div class="kanban-card" draggable="true">
+              <div class="badge low">
+                <span> Baixa prioridade </span>
               </div>
-              <!--  -->
-              <div class="user">
-                <img
-                  src="src/images/androgynous-avatar-non-binary-queer-person (1).jpg"
-                  alt="Avatar"
-                />
+
+              <p class="card-title">Título da tarefa</p>
+
+              <div class="card-infos">
+                <!-- <div class="card-icons">
+                  <p>
+                    <i class="fa-regular fa-comment"></i>
+                    1
+                  </p>
+
+                  <p>
+                    <i class="fa-solid fa-paperclip"></i>
+                    1
+                  </p>
+                </div> -->
+                <div class="user">
+                  <img
+                    src="src/images/androgynous-avatar-non-binary-queer-person (1).jpg"
+                    alt="Avatar"
+                  />
+                </div>
               </div>
-              <!--  -->
             </div>
-            <!--  -->
+          </li>
+        </ul>
+
+        <!-- COLUMN 4 -->
+        <ul class="kanban-column" data-id="4">
+          <div class="kanban-title">
+            <h2>Em teste</h2>
+
+            <button class="add-card">
+              <i class="fa-solid fa-plus"></i>
+            </button>
           </div>
-          <!--  -->
-        </div>
-      </div>
-
-      <!-- COLUMN 5 -->
-      <div class="kanban-column" data-id="5">
-        <div class="kanban-title">
-          <h2>Concluído</h2>
-
-          <button class="add-card">
-            <i class="fa-solid fa-plus"></i>
-          </button>
-        </div>
-        <!-- CARDS -->
-        <div class="kanban-cards">
-          <div class="kanban-card" draggable="true">
-            <div class="badge high">
-              <span> Alta prioridade </span>
-            </div>
-
-            <p class="card-title">Título da tarefa</p>
-
-            <div class="card-infos">
-              <div class="card-icons">
-                <p>
-                  <i class="fa-regular fa-comment"></i>
-                  1
-                </p>
-
-                <p>
-                  <i class="fa-solid fa-paperclip"></i>
-                  1
-                </p>
+          <!-- CARDS -->
+          <li class="kanban-cards">
+            <div class="kanban-card" draggable="true">
+              <div class="badge high">
+                <span> Alta prioridade </span>
               </div>
-              <!--  -->
-              <div class="user">
-                <img
-                  src="src/images/androgynous-avatar-non-binary-queer-person (1).jpg"
-                  alt="Avatar"
-                />
+
+              <p class="card-title">Título da tarefa</p>
+
+              <div class="card-infos">
+                <!-- <div class="card-icons">
+                  <p>
+                    <i class="fa-regular fa-comment"></i>
+                    1
+                  </p>
+
+                  <p>
+                    <i class="fa-solid fa-paperclip"></i>
+                    1
+                  </p>
+                </div> -->
+                <div class="user">
+                  <img
+                    src="src/images/androgynous-avatar-non-binary-queer-person (1).jpg"
+                    alt="Avatar"
+                  />
+                </div>
               </div>
-              <!--  -->
             </div>
-            <!--  -->
+          </li>
+        </ul>
+
+        <!-- COLUMN 5 -->
+        <ul class="kanban-column" data-id="5">
+          <div class="kanban-title">
+            <h2>Concluído</h2>
+
+            <button class="add-card">
+              <i class="fa-solid fa-plus"></i>
+            </button>
           </div>
-          <!--  -->
-        </div>
-      </div>
+          <!-- CARDS -->
+          <li class="kanban-cards">
+            <div class="kanban-card" draggable="true">
+              <div class="badge high">
+                <span> Alta prioridade </span>
+              </div>
+
+              <p class="card-title">Título da tarefa</p>
+
+              <div class="card-infos">
+                <!-- <div class="card-icons">
+                  <p>
+                    <i class="fa-regular fa-comment"></i>
+                    1
+                  </p>
+
+                  <p>
+                    <i class="fa-solid fa-paperclip"></i>
+                    1
+                  </p>
+                </div> -->
+                <div class="user">
+                  <img
+                    src="src/images/androgynous-avatar-non-binary-queer-person (1).jpg"
+                    alt="Avatar"
+                  />
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
     </main>
 
     <script src="src/javascript/script.js"></script>
